@@ -9,26 +9,26 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF2F2F2),
+      backgroundColor: const Color(0xffF2F2F2),
       body: SafeArea(
         child: SingleChildScrollView(
           // Esto es para que haga un rebote arriba cuando hacemos scroll
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: SizedBox(
             height: MediaQuery.of(context).size.height * 0.9,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Logo(
+                const Logo(
                   title: 'Register',
                 ),
                 _Form(),
-                Labels(
+                const Labels(
                   ruta: 'login',
                   question: 'Do you have an account?',
                   account: 'Login',
                 ),
-                Text('About it', style: TextStyle(fontWeight: FontWeight.w200)),
+                const Text('About it', style: TextStyle(fontWeight: FontWeight.w200)),
                 const SizedBox(),
               ],
             ),
@@ -51,8 +51,8 @@ class __FormState extends State<_Form> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 40),
-      padding: EdgeInsets.symmetric(horizontal: 50),
+      margin: const EdgeInsets.only(top: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         children: [
           CustomInput(

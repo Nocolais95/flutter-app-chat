@@ -11,21 +11,21 @@ class Blue_Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      child: Container(
+      style: ButtonStyle(
+        elevation: MaterialStateProperty.all(5.0),
+        shape: MaterialStateProperty.all(const StadiumBorder()),
+      ),
+      child: SizedBox(
         width: double.infinity,
         height: 55,
         child: Center(
           child: Text(
             textButton,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 17,
             ),
           ),
         ),
-      ),
-      style: ButtonStyle(
-        elevation: MaterialStateProperty.all(5.0),
-        shape: MaterialStateProperty.all(StadiumBorder()),
       ),
     );
   }
